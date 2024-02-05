@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    transition: background-color 0.3s ease; /* Add background color fade transition for the body */
+}
+
+.popup-container {
+    text-align: center;
+}
+
+.popup {
+    border-radius: 20px;
+    width: 170px;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgba(255, 214, 226);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    border: solid;
+}
+
+.popup:hover {
+    opacity: 0.8;
+}
+
+/* Modal Styles */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(210, 210, 210, 0); /* Use rgba for transparent background color */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Add background color fade transition for the modal */
+}
+
+.modal {
+    opacity: 0;
+    transform: scale(0.8);
+    background: #fff;
+    padding: 60px;
+    font-weight: bold;
+    font-family: 'Special Elite', monospace;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 20px;
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Add background color fade transition for the modal */
+}
+
+.modal.show {
+    opacity: 1;
+    transform: scale(1);
+    background: #fff; /* Set the final background color when the modal is visible */
+}
+
+.close {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.modal-content button {
+    margin-top: 10px;
+}
+
+
